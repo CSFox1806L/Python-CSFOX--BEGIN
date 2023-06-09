@@ -1,0 +1,27 @@
+import turtle
+
+fondo = turtle.Turtle()
+fondo.screen.bgcolor("black")
+fondo.pensize()
+fondo.color("sienna")
+fondo.left(90)
+fondo.backward(100)
+fondo.speed(100)
+fondo.shape("turtle")
+
+def arbol(i):
+    if i<10:
+        return
+    else:
+        fondo.forward(i)
+        fondo.color("hot pink")
+        fondo.circle(2)
+        fondo.color("sienna")
+        fondo.left(30)
+        arbol(3*i/4)
+        fondo.right(60)
+        arbol(3*i/4)
+        fondo.left(30)
+        fondo.backward(i)
+arbol(100)
+turtle.done()
